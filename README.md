@@ -20,6 +20,8 @@ There are 3 culling methods:
 
 Tested in a **Cleanroom** environment with **Actinium**: the mod's video settings interface displays correctly, so the leaf culling options can be configured as expected.
 
+![Cleanroom + Actinium - video settings interface](docs/compatibility-cleanroom-actinium.jpg)
+
 ## Requirements
 
 - Minecraft **1.12.2**
