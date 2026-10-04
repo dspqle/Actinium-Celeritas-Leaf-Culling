@@ -1,0 +1,42 @@
+// 全局初始化脚本：把 mavenCentral 的请求重定向到国内镜像，
+// 避免 repo.maven.apache.org 在国内直连超时导致依赖解析失败。
+allprojects {
+    buildscript {
+        repositories {
+            all { ArtifactRepository repo ->
+                if (repo instanceof MavenArtifactRepository) {
+                    def urlStr = repo.url.toString()
+                    if (urlStr.contains('repo.maven.apache.org') || urlStr.contains('repo1.maven.org')) {
+                        repo.setUrl('https://repo.huaweicloud.com/repository/maven/')
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        all { ArtifactRepository repo ->
+            if (repo instanceof MavenArtifactRepository) {
+                def urlStr = repo.url.toString()
+                if (urlStr.contains('repo.maven.apache.org') || urlStr.contains('repo1.maven.org')) {
+                    repo.setUrl('https://repo.huaweicloud.com/repository/maven/')
+                }
+            }
+        }
+        // 确保镜像仓库存在（排在最前，加速命中）
+        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
+    }
+}
+settingsEvaluated { settings ->
+    settings.pluginManagement {
+        repositories {
+            all { ArtifactRepository repo ->
+                if (repo instanceof MavenArtifactRepository) {
+                    def urlStr = repo.url.toString()
+                    if (urlStr.contains('repo.maven.apache.org') || urlStr.contains('repo1.maven.org')) {
+                        repo.setUrl('https://repo.huaweicloud.com/repository/maven/')
+                    }
+                }
+            }
+        }
+    }
+}

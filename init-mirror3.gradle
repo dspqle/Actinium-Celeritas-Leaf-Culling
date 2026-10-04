@@ -1,0 +1,31 @@
+// init script v3: 手动提供 Actinium jar，重定向 CurseMaven 到本地文件仓库
+def rewrite = { repo ->
+    try {
+        def url = repo.url.toString()
+        if (url.contains('curse.cleanroommc.com') || url.contains('curse.maven')) {
+            repo.setUrl('file:///root/local-maven')
+            println "[init-mirror] redirect ${url} -> file:///root/local-maven"
+        } else if (url.contains('repo.maven.apache.org') || url.contains('repo1.maven.org')) {
+            repo.setUrl('https://repo.huaweicloud.com/repository/maven/')
+        }
+    } catch (Exception e) {}
+}
+
+allprojects {
+    repositories {
+        all { repo -> rewrite(repo) }
+        maven { url 'file:///root/local-maven' }
+    }
+    buildscript {
+        repositories {
+            all { repo -> rewrite(repo) }
+            maven { url 'file:///root/local-maven' }
+        }
+    }
+}
+
+settingsEvaluated { settings ->
+    try {
+        settings.pluginManagement.repositories.all { repo -> rewrite(repo) }
+    } catch (Exception e) {}
+}
