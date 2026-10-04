@@ -16,10 +16,9 @@ There are 3 culling methods:
 - **Solid aggressive** - replaces leaves that are fully surrounded horizontally (north, south, east, west) but ignores vertical neighbors. Better performance than Solid but looks worse.
 - **Solid** - replaces leaves fully surrounded on all six sides (up, down, north, south, east, west) with a solid block. Looks best out of all options, almost visually equal to Vanilla fancy option.
 
-## Benchmark (9800x3d, 7900xtx, 3440x1440)
+## Compatibility
 
-- In Twilight Forest on **Hollow** option, FPS went from **540** to **740** with 32RD.
-- In Twilight Forest on **Solid** option, FPS went from **540** to **640** with 32RD.
+Tested in a **Cleanroom** environment with **Actinium**: the mod's video settings interface displays correctly, so the leaf culling options can be configured as expected.
 
 ## Requirements
 
