@@ -1,0 +1,2 @@
+# Actinium-Celeritas-Leaf-Culling
+把原本Celeritas的前置更改为功能更完全的Actinium且无需Celeritas Compat Bridge作为兼容层可直接使用兼容目前最新的alpha-0.0.12版本
