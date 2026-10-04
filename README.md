@@ -1,5 +1,7 @@
 # Celeritas Leaf Culling
 
+![Cleanroom + Actinium - video settings interface](docs/compatibility-cleanroom-actinium.jpg)
+
 **Fork of SodiumLeafCulling for Minecraft 1.12.2, now adapted for Actinium (Actinium-compatible).**
 
 This mod enables the Celeritas/Fast Block Renderer leaf culling to reduce unnecessary leaf rendering, improving FPS and reducing GPU load with virtually no visual impact. Ideal for large modpacks and low-end hardware.
@@ -19,8 +21,6 @@ There are 3 culling methods:
 ## Compatibility
 
 Tested in a **Cleanroom** environment with **Actinium**: the mod's video settings interface displays correctly, so the leaf culling options can be configured as expected.
-
-![Cleanroom + Actinium - video settings interface](docs/compatibility-cleanroom-actinium.jpg)
 
 ## Requirements
 
