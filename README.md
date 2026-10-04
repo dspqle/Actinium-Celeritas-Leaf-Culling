@@ -27,7 +27,12 @@ Tested in a **Cleanroom** environment with **Actinium**: the mod's video setting
 ## Requirements
 
 - Minecraft **1.12.2**
-- **Actinium** (required dependency)
+- [Cleanroom Loader](https://github.com/CleanroomMC/Cleanroom) 0.6.10-alpha or newer
+- [Actinium](https://github.com/kappa-maintainer/Celeritas-auto-build/releases) 2.4.0 or newer (required dependency)
+
+### Optional dependency
+
+- [AssetMover](https://github.com/CleanroomMC/AssetMover) 2.5 or newer
 
 ## Authors
 
