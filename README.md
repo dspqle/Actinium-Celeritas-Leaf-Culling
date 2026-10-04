@@ -6,7 +6,7 @@
 
 This mod enables the Celeritas/Fast Block Renderer leaf culling to reduce unnecessary leaf rendering, improving FPS and reducing GPU load with virtually no visual impact. Ideal for large modpacks and low-end hardware.
 
-> **Note:** This build targets **Actinium** as its dependency (replacing the original Celeritas requirement). Make sure **Actinium** is installed. Compatible with Cleanroom.
+> **Note:** This build targets [**Actinium**](https://github.com/Q-Engineering-Source/Actinium) as its dependency (replacing the original Celeritas requirement). Make sure [**Actinium**](https://github.com/Q-Engineering-Source/Actinium) is installed. Compatible with Cleanroom.
 
 ---
 
